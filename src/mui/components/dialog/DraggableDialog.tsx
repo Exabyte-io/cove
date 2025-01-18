@@ -8,7 +8,7 @@ import Dialog, { DialogModalProps } from "./Dialog";
 function draggablePaperComponent(id: string) {
     return function DraggablePaper(props: PaperProps) {
         return (
-            <Draggable handle={`#${id}`} cancel={'[class*="MuiDialogContent-root"]'}>
+            <Draggable handle={`#${id}`} cancel='[class*="MuiDialogContent-root"]'>
                 <Paper {...props} />
             </Draggable>
         );

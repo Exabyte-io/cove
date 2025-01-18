@@ -8,9 +8,7 @@ export const isOpera =
 // Firefox 1.0+
 export const isFirefox = typeof InstallTrigger !== "undefined";
 
-// At least Safari 3+: "[object HTMLElementConstructor]"
-export const isSafari =
-    Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
+export const isSafari = navigator.userAgent.includes("Safari/");
 
 // Internet Explorer 6-11
 export const isIE = /* @cc_on!@ */ false || !!document.documentMode;
@@ -19,7 +17,7 @@ export const isIE = /* @cc_on!@ */ false || !!document.documentMode;
 export const isEdge = !isIE && !!window.StyleMedia;
 
 // Chrome 1+
-export const isChrome = navigator.userAgent.indexOf("Chrome/") !== -1;
+export const isChrome = navigator.userAgent.includes("Chrome/");
 
 // Blink engine detection
 export const isBlink = (isChrome || isOpera) && !!window.CSS;
